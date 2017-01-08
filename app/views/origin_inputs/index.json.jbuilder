@@ -1,0 +1,1 @@
+json.array! @origin_inputs, partial: 'origin_inputs/origin_input', as: :origin_input

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Origin Transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Block height</th>
+      <th>Block index</th>
+      <th>Origin hash</th>
+      <th>Total</th>
+      <th>Fees</th>
+      <th>Size</th>
+      <th>Preference</th>
+      <th>Relayed by</th>
+      <th>Received</th>
+      <th>Ver</th>
+      <th>Lock time</th>
+      <th>Double spend</th>
+      <th>Vin sz</th>
+      <th>Vout sz</th>
+      <th>Confirmations</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @origin_transactions.each do |origin_transaction| %>
+      <tr>
+        <td><%= origin_transaction.block_height %></td>
+        <td><%= origin_transaction.block_index %></td>
+        <td><%= origin_transaction.origin_hash %></td>
+        <td><%= origin_transaction.total %></td>
+        <td><%= origin_transaction.fees %></td>
+        <td><%= origin_transaction.size %></td>
+        <td><%= origin_transaction.preference %></td>
+        <td><%= origin_transaction.relayed_by %></td>
+        <td><%= origin_transaction.received %></td>
+        <td><%= origin_transaction.ver %></td>
+        <td><%= origin_transaction.lock_time %></td>
+        <td><%= origin_transaction.double_spend %></td>
+        <td><%= origin_transaction.vin_sz %></td>
+        <td><%= origin_transaction.vout_sz %></td>
+        <td><%= origin_transaction.confirmations %></td>
+        <td><%= link_to 'Show', origin_transaction %></td>
+        <td><%= link_to 'Edit', edit_origin_transaction_path(origin_transaction) %></td>
+        <td><%= link_to 'Destroy', origin_transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Origin transaction', new_origin_transaction_path %>

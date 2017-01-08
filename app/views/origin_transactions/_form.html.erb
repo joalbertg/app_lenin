@@ -1,0 +1,77 @@
+<%= form_for(@origin_transaction) do |f| %>
+  <% if @origin_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@origin_transaction.errors.count, "error") %> prohibited this origin_transaction from being saved:</h2>
+
+      <ul>
+      <% @origin_transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :block_height %><br>
+    <%= f.number_field :block_height %>
+  </div>
+  <div class="field">
+    <%= f.label :block_index %><br>
+    <%= f.number_field :block_index %>
+  </div>
+  <div class="field">
+    <%= f.label :origin_hash %><br>
+    <%= f.text_area :origin_hash %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br>
+    <%= f.number_field :total %>
+  </div>
+  <div class="field">
+    <%= f.label :fees %><br>
+    <%= f.number_field :fees %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :preference %><br>
+    <%= f.text_field :preference %>
+  </div>
+  <div class="field">
+    <%= f.label :relayed_by %><br>
+    <%= f.text_field :relayed_by %>
+  </div>
+  <div class="field">
+    <%= f.label :received %><br>
+    <%= f.datetime_select :received %>
+  </div>
+  <div class="field">
+    <%= f.label :ver %><br>
+    <%= f.number_field :ver %>
+  </div>
+  <div class="field">
+    <%= f.label :lock_time %><br>
+    <%= f.number_field :lock_time %>
+  </div>
+  <div class="field">
+    <%= f.label :double_spend %><br>
+    <%= f.text_field :double_spend %>
+  </div>
+  <div class="field">
+    <%= f.label :vin_sz %><br>
+    <%= f.number_field :vin_sz %>
+  </div>
+  <div class="field">
+    <%= f.label :vout_sz %><br>
+    <%= f.number_field :vout_sz %>
+  </div>
+  <div class="field">
+    <%= f.label :confirmations %><br>
+    <%= f.text_field :confirmations %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<%= form_for(@origin_output) do |f| %>
+  <% if @origin_output.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@origin_output.errors.count, "error") %> prohibited this origin_output from being saved:</h2>
+
+      <ul>
+      <% @origin_output.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :script %><br>
+    <%= f.text_area :script %>
+  </div>
+  <div class="field">
+    <%= f.label :addresses %><br>
+    <%= f.text_area :addresses %>
+  </div>
+  <div class="field">
+    <%= f.label :script_type %><br>
+    <%= f.text_field :script_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

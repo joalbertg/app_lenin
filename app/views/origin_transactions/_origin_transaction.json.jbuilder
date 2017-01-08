@@ -1,0 +1,2 @@
+json.extract! origin_transaction, :id, :block_height, :block_index, :origin_hash, :total, :fees, :size, :preference, :relayed_by, :received, :ver, :lock_time, :double_spend, :vin_sz, :vout_sz, :confirmations, :created_at, :updated_at
+json.url origin_transaction_url(origin_transaction, format: :json)

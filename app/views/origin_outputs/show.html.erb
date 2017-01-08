@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @origin_output.value %>
+</p>
+
+<p>
+  <strong>Script:</strong>
+  <%= @origin_output.script %>
+</p>
+
+<p>
+  <strong>Addresses:</strong>
+  <%= @origin_output.addresses %>
+</p>
+
+<p>
+  <strong>Script type:</strong>
+  <%= @origin_output.script_type %>
+</p>
+
+<%= link_to 'Edit', edit_origin_output_path(@origin_output) %> |
+<%= link_to 'Back', origin_outputs_path %>

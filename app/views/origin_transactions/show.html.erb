@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Block height:</strong>
+  <%= @origin_transaction.block_height %>
+</p>
+
+<p>
+  <strong>Block index:</strong>
+  <%= @origin_transaction.block_index %>
+</p>
+
+<p>
+  <strong>Origin hash:</strong>
+  <%= @origin_transaction.origin_hash %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @origin_transaction.total %>
+</p>
+
+<p>
+  <strong>Fees:</strong>
+  <%= @origin_transaction.fees %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @origin_transaction.size %>
+</p>
+
+<p>
+  <strong>Preference:</strong>
+  <%= @origin_transaction.preference %>
+</p>
+
+<p>
+  <strong>Relayed by:</strong>
+  <%= @origin_transaction.relayed_by %>
+</p>
+
+<p>
+  <strong>Received:</strong>
+  <%= @origin_transaction.received %>
+</p>
+
+<p>
+  <strong>Ver:</strong>
+  <%= @origin_transaction.ver %>
+</p>
+
+<p>
+  <strong>Lock time:</strong>
+  <%= @origin_transaction.lock_time %>
+</p>
+
+<p>
+  <strong>Double spend:</strong>
+  <%= @origin_transaction.double_spend %>
+</p>
+
+<p>
+  <strong>Vin sz:</strong>
+  <%= @origin_transaction.vin_sz %>
+</p>
+
+<p>
+  <strong>Vout sz:</strong>
+  <%= @origin_transaction.vout_sz %>
+</p>
+
+<p>
+  <strong>Confirmations:</strong>
+  <%= @origin_transaction.confirmations %>
+</p>
+
+<%= link_to 'Edit', edit_origin_transaction_path(@origin_transaction) %> |
+<%= link_to 'Back', origin_transactions_path %>

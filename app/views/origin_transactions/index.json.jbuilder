@@ -1,0 +1,1 @@
+json.array! @origin_transactions, partial: 'origin_transactions/origin_transaction', as: :origin_transaction

@@ -1,0 +1,45 @@
+<%= form_for(@origin_input) do |f| %>
+  <% if @origin_input.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@origin_input.errors.count, "error") %> prohibited this origin_input from being saved:</h2>
+
+      <ul>
+      <% @origin_input.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prev_hash %><br>
+    <%= f.text_area :prev_hash %>
+  </div>
+  <div class="field">
+    <%= f.label :output_index %><br>
+    <%= f.number_field :output_index %>
+  </div>
+  <div class="field">
+    <%= f.label :script %><br>
+    <%= f.text_area :script %>
+  </div>
+  <div class="field">
+    <%= f.label :output_value %><br>
+    <%= f.number_field :output_value %>
+  </div>
+  <div class="field">
+    <%= f.label :sequence %><br>
+    <%= f.number_field :sequence %>
+  </div>
+  <div class="field">
+    <%= f.label :addresses %><br>
+    <%= f.text_area :addresses %>
+  </div>
+  <div class="field">
+    <%= f.label :script_type %><br>
+    <%= f.text_field :script_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

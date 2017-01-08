@@ -1,0 +1,2 @@
+module OriginOutputsHelper
+end

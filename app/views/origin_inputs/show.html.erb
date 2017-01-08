@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prev hash:</strong>
+  <%= @origin_input.prev_hash %>
+</p>
+
+<p>
+  <strong>Output index:</strong>
+  <%= @origin_input.output_index %>
+</p>
+
+<p>
+  <strong>Script:</strong>
+  <%= @origin_input.script %>
+</p>
+
+<p>
+  <strong>Output value:</strong>
+  <%= @origin_input.output_value %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @origin_input.sequence %>
+</p>
+
+<p>
+  <strong>Addresses:</strong>
+  <%= @origin_input.addresses %>
+</p>
+
+<p>
+  <strong>Script type:</strong>
+  <%= @origin_input.script_type %>
+</p>
+
+<%= link_to 'Edit', edit_origin_input_path(@origin_input) %> |
+<%= link_to 'Back', origin_inputs_path %>

@@ -1,0 +1,2 @@
+module OriginInputsHelper
+end

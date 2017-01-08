@@ -1,0 +1,1 @@
+json.partial! "origin_inputs/origin_input", origin_input: @origin_input

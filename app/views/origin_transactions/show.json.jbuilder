@@ -1,0 +1,1 @@
+json.partial! "origin_transactions/origin_transaction", origin_transaction: @origin_transaction

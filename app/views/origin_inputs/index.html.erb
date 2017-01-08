@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Origin Inputs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prev hash</th>
+      <th>Output index</th>
+      <th>Script</th>
+      <th>Output value</th>
+      <th>Sequence</th>
+      <th>Addresses</th>
+      <th>Script type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @origin_inputs.each do |origin_input| %>
+      <tr>
+        <td><%= origin_input.prev_hash %></td>
+        <td><%= origin_input.output_index %></td>
+        <td><%= origin_input.script %></td>
+        <td><%= origin_input.output_value %></td>
+        <td><%= origin_input.sequence %></td>
+        <td><%= origin_input.addresses %></td>
+        <td><%= origin_input.script_type %></td>
+        <td><%= link_to 'Show', origin_input %></td>
+        <td><%= link_to 'Edit', edit_origin_input_path(origin_input) %></td>
+        <td><%= link_to 'Destroy', origin_input, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Origin input', new_origin_input_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Origin Outputs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Script</th>
+      <th>Addresses</th>
+      <th>Script type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @origin_outputs.each do |origin_output| %>
+      <tr>
+        <td><%= origin_output.value %></td>
+        <td><%= origin_output.script %></td>
+        <td><%= origin_output.addresses %></td>
+        <td><%= origin_output.script_type %></td>
+        <td><%= link_to 'Show', origin_output %></td>
+        <td><%= link_to 'Edit', edit_origin_output_path(origin_output) %></td>
+        <td><%= link_to 'Destroy', origin_output, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Origin output', new_origin_output_path %>
